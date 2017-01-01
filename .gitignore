@@ -1,0 +1,11 @@
+# macOS files
+.DS_Store
+
+# RSpec config
+.rspec
+
+# RVM files
+.ruby-version
+.ruby-gemset
+.rvmrc
+

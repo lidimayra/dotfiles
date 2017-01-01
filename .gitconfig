@@ -1,0 +1,7 @@
+[user]
+	name = Lidiane Taquehara
+	email = lidi.mayra@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
