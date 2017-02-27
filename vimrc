@@ -24,3 +24,23 @@ set expandtab
 
 syntax enable
 filetype plugin indent on
+
+" Mappings
+let mapleader = "\<Space>" " Use space key as leader.
+
+nmap <leader>vr :vsp $MYVIMRC<cr> " Split edit vimrc vertically.
+nmap <leader>so :source $MYVIMRC<cr>
+
+" Move between wrapped lines without skipping it
+nmap j gj
+nmap k gk
+
+" Swap 0 and ˆ in order to make easier to move to the first non-whitespace
+" character
+nnoremap 0 ^
+nnoremap ^ 0
+
+" Enable use jk (and kj) to escape from insert mode
+imap jk <esc>
+imap kj <esc>
+
