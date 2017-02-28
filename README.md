@@ -1,8 +1,10 @@
 # My dotfiles 🔨
 
-## Usage
+## Requirements
+* macOS
+* [Homebrew](https://brew.sh/)
 
-I'm using thoughtbot [rcm](https://thoughtbot.github.io/rcm/) to manage my dotfiles. Installation instructions available [here](https://github.com/thoughtbot/rcm#installation).
+## Usage
 
 Clone files into _~/.dotfiles_ folder.
 
@@ -17,25 +19,11 @@ Update zprezto submodule.
 git submodule update --init --recursive
 ```
 
-Use rcm `rcup` command to generate symlinks pointing to _~/.dotfiles_ folder.
-If you want prezto, just call:
+Run the installation script
 ```
-rcup -v
-```
-If you do not want prezto, exclude it by using `-x` option:
-```
-rcup -v -x zprezto
+./install/setup.sh
 ```
 
-If installing prezto, a new Zsh configuration will be needed. Generate it by running:
-```
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-```
+This script sets zsh as the default shell. Changes will be available next time you login.
 
-Then source your _~/.zshrc_
-```
-source ~/.zshrc
-```
+To install vim plugins, run `:PlugInstall` in vim.
