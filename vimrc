@@ -44,3 +44,24 @@ nnoremap ^ 0
 imap jk <esc>
 imap kj <esc>
 
+" Specify plugins directory
+call plug#begin('~/.vim/plugged')
+
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jgdavey/tslime.vim'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" tslime.vim open vim-rspec results in another tmux pane
+let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
