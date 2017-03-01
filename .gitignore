@@ -1,6 +1,12 @@
 # macOS files
 .DS_Store
 
+# Application specific
+/ignore/
+
+# Byebug
+.byebug_history
+
 # RSpec config
 .rspec
 
@@ -9,3 +15,5 @@
 .ruby-gemset
 .rvmrc
 
+# Swap files
+*.sw[nop]
