@@ -7,6 +7,9 @@
 # Byebug
 .byebug_history
 
+# npm
+npm-debug.log
+
 # RSpec config
 .rspec
 
