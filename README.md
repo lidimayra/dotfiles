@@ -1,8 +1,7 @@
 # My dotfiles 🔨
 
 ## Requirements
-* macOS
-* [Homebrew](https://brew.sh/)
+macOS with [Homebrew](https://brew.sh/) or Ubuntu
 
 ## Usage
 

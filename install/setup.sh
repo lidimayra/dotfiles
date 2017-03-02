@@ -1,8 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-# Update brew and install dependencies
-brew update
-brew bundle
+kernelName="$(uname -s)"
+
+if [ "$kernelName" == "Darwin" ]; then
+  # Update brew and install dependencies
+  brew update && brew bundle
+elif [ "$kernelName" == "Linux" ]; then
+  # Run script to install ubuntu packages
+  source ~/.dotfiles/install/ubuntu.sh
+fi
 
 # Download plug.vim and put it in the `autoload` directory
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
