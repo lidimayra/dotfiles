@@ -44,9 +44,22 @@ nnoremap ^ 0
 imap jk <esc>
 imap kj <esc>
 
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" automatically rebalance windows on resize
+autocmd VimResized * :wincmd =
+
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  " Zoom in a vim pane
+nnoremap <leader>= :wincmd =<cr>                " Zoom out a vim pane
+
 " Specify plugins directory
 call plug#begin('~/.vim/plugged')
 
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'thoughtbot/vim-rspec'
