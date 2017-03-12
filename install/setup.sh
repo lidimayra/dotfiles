@@ -17,6 +17,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Install CPython and anaconda
 source ~/.dotfiles/install/python.sh
 
+# Install Ruby lastest stable version with Rails using RVM
+source ~/.dotfiles/install/ruby.sh
+
 # Generate symlinks
 env RCRC=$HOME/.dotfiles/rcrc rcup
 rcup -v
