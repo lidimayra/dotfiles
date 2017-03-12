@@ -14,7 +14,7 @@ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /et
 
 sudo apt-get update
 
-# Packages
+# General Packages
 sudo apt-get -qq install curl
 sudo apt-get -qq install google-chrome-stable
 sudo apt-get -qq install rcm
@@ -22,6 +22,20 @@ sudo apt-get -qq install silversearcher-ag
 sudo apt-get -qq install tmux
 sudo apt-get -qq install vim
 sudo apt-get -qq install zsh
+
+# Docker
+sudo apt-get install -qq linux-image-extra-$(uname -r) # Recommended extra packages, which
+sudo apt-get install -qq linux-image-extra-virtual     # allow to use `aufs` storage drivers.
+sudo apt-get install -qq apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable"
+sudo apt-get -qq install docker-ce
+
+# Docker Compose
+curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 
 # pyenv
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
