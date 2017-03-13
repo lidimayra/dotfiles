@@ -56,6 +56,8 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>  " Zoom in a vim pane
 nnoremap <leader>= :wincmd =<cr>                " Zoom out a vim pane
 
+map <leader>i mmgg=G'm " Indent whole file and return cursor to original position
+
 " Specify plugins directory
 call plug#begin('~/.vim/plugged')
 
