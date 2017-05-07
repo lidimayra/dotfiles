@@ -64,6 +64,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jgdavey/tslime.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
@@ -81,6 +82,8 @@ map <Leader>a :call RunAllSpecs()<CR>
 " tslime.vim open vim-rspec results in another tmux pane
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
 
-" Make CtrlP use ag for listing the files. Way faster and no useless files.
+" Make CtrlP and FZF use ag for listing the files.
+" Way faster and no useless files.
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
