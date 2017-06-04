@@ -18,5 +18,9 @@ npm-debug.log
 .ruby-gemset
 .rvmrc
 
+# Python byte-compiled files
+__pycache__/
+*.py[cod]
+
 # Swap files
 *.sw[nop]
