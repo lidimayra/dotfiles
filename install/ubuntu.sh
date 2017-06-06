@@ -45,3 +45,8 @@ pyenv update
 # https://github.com/pyenv/pyenv/wiki/Common-build-problems#requirements
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
   libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
+
+# Install Google Cloud SDK
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -P ~/Downloads
+tar zvxvf ~/Downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -C ~/Downloads
+~/Downloads/google-cloud-sdk/install.sh
