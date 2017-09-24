@@ -2,6 +2,7 @@
 set nocompatible " Don't maintain compatibility with vi
 
 set backspace=indent,eol,start
+set noswapfile
 set ruler " Show cursor position
 set title " Show file title at the top of terminal window
 
@@ -11,7 +12,7 @@ set numberwidth=5
 set relativenumber
 
 " Search settings
-set hlsearch " Highlight all matches. To turn it off, use :noh
+set hlsearch  " Highlight all matches. To turn it off, use :noh
 set incsearch " When searching, shows patterns typed so far
 
 " Tab settings
