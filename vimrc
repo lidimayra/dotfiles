@@ -23,6 +23,9 @@ set tabstop=2
 " won't be messed up if tabstop is changed
 set expandtab 
 
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
+
 syntax enable
 filetype plugin indent on
 
