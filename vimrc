@@ -26,6 +26,7 @@ set expandtab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
+colorscheme peachpuff
 syntax enable
 filetype plugin indent on
 
