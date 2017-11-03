@@ -67,9 +67,9 @@ map <leader>i mmgg=G'm " Indent whole file and return cursor to original positio
 call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
@@ -87,8 +87,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 " tslime.vim open vim-rspec results in another tmux pane
 let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
 
-" Make CtrlP and FZF use ag for listing the files.
-" Way faster and no useless files.
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+" FZF settings
+nnoremap <C-p> :Files<cr>
+let g:fzf_files_options =
+  \ '--reverse ' .
+  \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
+
+" Use ag for listing files. Way faster and no useless files.
 let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
