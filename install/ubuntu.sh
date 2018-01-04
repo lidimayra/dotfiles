@@ -17,6 +17,7 @@ sudo apt-get update
 # General Packages
 sudo apt-get -qq install curl
 sudo apt-get -qq install google-chrome-stable
+sudo apt-get -qq install jq
 sudo apt-get -qq install rcm
 sudo apt-get -qq install silversearcher-ag
 sudo apt-get -qq install tmux
