@@ -1,6 +1,7 @@
 [user]
 	name = Lidiane Taquehara
 	email = lidi.mayra@gmail.com
+	signingkey = F6B2B4BA63B21846
 [push]
 	default = simple
 [core]
@@ -17,3 +18,7 @@
 	unstage = reset
 	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
 	u-reset = !git reset --hard $(git upstream)
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
