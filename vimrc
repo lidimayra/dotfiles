@@ -30,6 +30,10 @@ colorscheme peachpuff
 syntax enable
 filetype plugin indent on
 
+set textwidth=80         " Break line automatically when reach 81 column
+set colorcolumn=+1       " Make 81 column visible
+hi ColorColumn ctermbg=5 " Set column color
+
 " Mappings
 let mapleader = "\<Space>" " Use space key as leader.
 
