@@ -23,6 +23,7 @@ source ~/.dotfiles/install/ruby.sh
 # Generate symlinks
 env RCRC=$HOME/.dotfiles/rcrc rcup
 rcup -v
+ln -s ~/vimrc ~/.ideavimrc
 
 # Set zsh as default shell
 chsh -s $(which zsh)
