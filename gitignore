@@ -3,6 +3,7 @@
 
 # Application specific
 /ignore/
+/vendor/
 
 # Byebug
 .byebug_history
