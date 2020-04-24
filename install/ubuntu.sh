@@ -23,6 +23,7 @@ sudo apt-get -qq install silversearcher-ag
 sudo apt-get -qq install tmux
 sudo apt-get -qq install vim
 sudo apt-get -qq install zsh
+sudo snap install slack --classic
 
 # Docker
 sudo apt-get install -qq linux-image-extra-$(uname -r) # Recommended extra packages, which
