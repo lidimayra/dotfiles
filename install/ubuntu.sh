@@ -1,7 +1,10 @@
+mkdir ~/bin
+
 # Install hub binaries and documentation
-wget https://github.com/github/hub/releases/download/v2.2.5/hub-linux-amd64-2.2.5.tgz -P ~/Downloads
-tar zvxvf ~/Downloads/hub-linux-amd64-2.2.5.tgz -C ~/Downloads
-sudo ~/Downloads/hub-linux-amd64-2.2.5/install
+wget https://github.com/github/hub/releases/download/v2.2.5/hub-linux-amd64-2.2.5.tgz -P ~/bin
+tar zvxvf ~/bin/hub-linux-amd64-2.2.5.tgz -C ~/bin
+sudo ~/bin/hub-linux-amd64-2.2.5/install
+rm ~/bin/hub-linux-amd64-2.2.5.tgz
 
 # Repositories
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
@@ -49,6 +52,7 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
   libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
 
 # Install Google Cloud SDK
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -P ~/Downloads
-tar zvxvf ~/Downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -C ~/Downloads
-~/Downloads/google-cloud-sdk/install.sh
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -P ~/bin
+tar zvxvf ~/bin/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz -C ~/bin
+~/bin/google-cloud-sdk/install.sh
+rm ~/bin/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
