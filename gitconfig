@@ -18,6 +18,7 @@
 	unstage = reset
 	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
 	u-reset = !git reset --hard $(git upstream)
+	pfl = push --force-with-lease
 [commit]
 	gpgsign = true
 [gpg]
