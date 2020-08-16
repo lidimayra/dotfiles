@@ -19,14 +19,13 @@ set incsearch " When searching, shows patterns typed so far
 set shiftround
 set shiftwidth=2
 set tabstop=2
-" Always use spaces when inserting a <Tab>, so formatting 
+" Always use spaces when inserting a <Tab>, so formatting
 " won't be messed up if tabstop is changed
-set expandtab 
+set expandtab
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-colorscheme peachpuff
 syntax enable
 filetype plugin indent on
 
@@ -70,6 +69,7 @@ map <leader>i mmgg=G'm " Indent whole file and return cursor to original positio
 " Specify plugins directory
 call plug#begin('~/.vim/plugged')
 
+Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
@@ -81,6 +81,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
+
+set background=dark
+colorscheme solarized
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
