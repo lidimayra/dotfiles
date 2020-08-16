@@ -1,5 +1,6 @@
 # macOS files
 .DS_Store
+Brewfile.lock.json
 
 # Application specific
 /ignore/
