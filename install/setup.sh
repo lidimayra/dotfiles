@@ -25,6 +25,11 @@ source ~/.dotfiles/install/python.sh
 # Install Ruby lastest stable version with Rails using RVM
 source ~/.dotfiles/install/ruby.sh
 
+# Install nvm
+if [ ! -d "$HOME/.nvm" ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+fi
+
 # Generate symlinks
 env RCRC=$HOME/.dotfiles/rcrc rcup
 rcup -v
