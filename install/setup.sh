@@ -5,6 +5,7 @@ kernelName="$(uname -s)"
 if [ "$kernelName" == "Darwin" ]; then
   # Update brew and install dependencies
   brew update && brew bundle
+  /usr/bin/tic -x ~/.dotfiles/tmux-256color.terminfo
 elif [ "$kernelName" == "Linux" ]; then
   # Run script to install ubuntu packages
   source ~/.dotfiles/install/ubuntu.sh
