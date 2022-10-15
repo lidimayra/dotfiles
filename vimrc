@@ -36,7 +36,7 @@ hi ColorColumn ctermbg=5 " Set column color
 " Mappings
 let mapleader = "\<Space>" " Use space key as leader.
 
-nmap <leader>vr :vsp $MYVIMRC<cr> " Split edit vimrc vertically.
+nmap <leader>vr :vsp $HOME/.vimrc<cr> " Split edit vimrc vertically.
 nmap <leader>so :source $MYVIMRC<cr>
 
 " Move between wrapped lines without skipping it
