@@ -13,8 +13,8 @@ rm ~/bin/chruby-0.3.9.tar.gz
 
 # Download and install ruby-install
 cd ~/bin
-wget -O ruby-install-0.7.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.7.0.tar.gz
-tar xzvf ~/bin/ruby-install-0.7.0.tar.gz
-cd ruby-install-0.7.0
+wget -O ruby-install-0.8.5.tar.gz https://github.com/postmodern/ruby-install/archive/v0.8.5.tar.gz
+tar -xzvf ruby-install-0.8.5.tar.gz
+cd ruby-install-0.8.5/
 sudo make install
-rm ~/bin/ruby-install-0.7.0.tar.gz
+rm ~/bin/ruby-install-0.8.5.tar.gz
