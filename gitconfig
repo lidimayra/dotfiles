@@ -23,3 +23,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg
+[branch]
+	sort = -committerdate
