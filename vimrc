@@ -69,7 +69,6 @@ map <leader>i mmgg=G'm " Indent whole file and return cursor to original positio
 " Specify plugins directory
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jgdavey/tslime.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': '.install --all' }
@@ -83,7 +82,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 set background=dark
-colorscheme solarized
+colorscheme desert
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

@@ -58,9 +58,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  'altercation/vim-colors-solarized',
   'christoomey/vim-tmux-navigator',
-  'altercation/vim-colors-solarized',
   'christoomey/vim-tmux-navigator',
   'jgdavey/tslime.vim',
   { "junegunn/fzf", dir = "~/.fzf", build = "./install --all" },
@@ -76,7 +74,7 @@ require("lazy").setup({
 })
 
 set.background='dark'
-vim.cmd [[silent! colorscheme solarized]]
+vim.cmd [[silent! colorscheme desert]]
 
 vim.keymap.set('n', '<leader>t', ':call RunCurrentSpecFile()<cr>')
 vim.keymap.set('n', '<leader>s', ':call RunNearestSpec()<cr>')
