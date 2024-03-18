@@ -37,6 +37,9 @@ vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/init.lua<cr>')
 vim.keymap.set('n', '0', '^')
 vim.keymap.set('n', '^', '0')
 
+-- Enable <leader>c to copy the current filepath to the clipboard
+vim.keymap.set('n', '<leader>c', ':let @*=expand("%")<CR>')
+
 -- Enable use jk (and kj) to escape from insert mode
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('i', 'kj', '<esc>')
