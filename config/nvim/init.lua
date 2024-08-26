@@ -73,7 +73,14 @@ require("lazy").setup({
   'tpope/vim-commentary',
   'tpope/vim-fugitive',
   'neovim/nvim-lspconfig',
-  { "neoclide/coc.nvim", branch = "release" }
+  { "neoclide/coc.nvim", branch = "release" },
+  {
+    'glepnir/galaxyline.nvim',
+      branch = 'main',
+      config = function()
+        require('config/nvim/statusline')
+      end,
+  },
 })
 
 set.background='dark'
