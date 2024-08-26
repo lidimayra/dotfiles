@@ -282,3 +282,15 @@ keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 
+-- Run standardrb on LSP mode. For ref, see: https://github.com/standardrb/standard/wiki/IDE:-neovim
+vim.opt.signcolumn = "yes" -- otherwise it bounces in and out, not strictly needed though
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "ruby",
+  group = vim.api.nvim_create_augroup("RubyLSP", { clear = true }), -- also this is not /needed/ but it's good practice
+  callback = function()
+    vim.lsp.start {
+      name = "standard",
+      cmd = { "/Users/lidianetaquehara/.rbenv/shims/standardrb", "--lsp" },
+    }
+  end,
+})
