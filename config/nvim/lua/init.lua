@@ -28,10 +28,10 @@ set.colorcolumn = "121"       -- Make 121 column visible
 vim.g.mapleader = "," -- Use comma key as leader.
 
 -- Split edit init.lua vertically
-vim.keymap.set('n', '<leader>vr', ':vsp $HOME/.config/nvim/init.lua<cr>')
+vim.keymap.set('n', '<leader>vr', ':vsp $HOME/.config/nvim/lua/init.lua<cr>')
 
 -- Source init.lua
-vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/init.lua<cr>')
+vim.keymap.set('n', '<leader>so', ':source $HOME/.config/nvim/lua/init.lua<cr>')
 
 -- Swap 0 and ˆ in order to make easier to move to the first non-whitespace character
 vim.keymap.set('n', '0', '^')
@@ -78,7 +78,7 @@ require("lazy").setup({
     'glepnir/galaxyline.nvim',
       branch = 'main',
       config = function()
-        require('config/nvim/statusline')
+        require('statusline')
       end,
   },
 })
