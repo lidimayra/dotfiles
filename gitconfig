@@ -26,3 +26,5 @@
 	format = ssh
 [branch]
 	sort = -committerdate
+[init]
+  defaultBranch = main
