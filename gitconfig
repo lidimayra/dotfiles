@@ -1,7 +1,7 @@
 [user]
 	name = Lidiane Taquehara
 	email = lidi.mayra@gmail.com
-	signingkey = /Users/lidianetaquehara/.ssh/id_ed25519.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 [push]
 	default = simple
 [core]
