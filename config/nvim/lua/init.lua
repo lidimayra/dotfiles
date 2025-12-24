@@ -290,7 +290,7 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.lsp.start {
       name = "standard",
-      cmd = { "/Users/lmayra/.asdf/shims/standardrb", "--lsp" },
+      cmd = { vim.fn.expand('$HOME/.local/share/mise/shims/standardrb'), "--lsp" },
     }
   end,
 })
